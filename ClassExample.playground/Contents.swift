@@ -32,7 +32,7 @@ import PlaygroundSupport
  
  */
 // Create an object of type Canvas, named "canvas"
-let canvas = Canvas(width: 500, height: 500)
+let canvas = Canvas(width: 480, height: 450)
 
 // Create an object of type Image, named "image"
 let image = Image(drawOn: canvas)
@@ -43,6 +43,11 @@ let image = Image(drawOn: canvas)
 canvas.drawRectangle(centreX: 50, centreY: 50, width: 25, height: 25)
 canvas.drawText(message: "This square is drawn from the playground directly.", size: 12, x: 75, y: 40)
 
+// White Rectangle
+canvas.drawShapesWithBorders = false
+canvas.drawShapesWithFill = true
+canvas.fillColor = Color.white
+canvas.drawRectangle(bottomLeftX: 0, bottomLeftY: 325, width: 480, height: 75)
 /*:
  ## Template code
  The code below is necessary to see results in the Assistant Editor at right. Please do not remove.

@@ -30,8 +30,19 @@ public class Image {
     func upperCircle() {
         
         // Draw a circle in the middle of the canvas
-        c.drawEllipse(centreX: c.width / 2, centreY: c.height / 2, width: 100, height: 100)
-        c.drawText(message: "This circle is drawn from inside the Image class.", size: 12, x: 125, y: c.height / 2 - 100)
+        c.drawShapesWithFill = false
+        c.defaultBorderWidth = 10
+        c.defaultLineWidth = 10
+        
+        // Upper Circles
+        for y in stride(from: 40, through: 500, by: 80) {
+            c.borderColor = Color(hue: 26, saturation: 69, brightness: 37, alpha: 100)
+            c.drawEllipse(centreX: y, centreY: 400, width: 60, height: 60)
+            c.borderColor = Color(hue: 22, saturation: 93, brightness: 90, alpha: 100)
+            c.drawEllipse(centreX: y, centreY: 400, width: 41, height: 41)
+            c.borderColor = Color(hue: 53, saturation: 93, brightness: 98, alpha: 100)
+            c.drawEllipse(centreX: y, centreY: 400, width: 21, height: 21)
+        }
         
     }
     
@@ -39,6 +50,14 @@ public class Image {
      Draws the lower circle of the wallpaper pattern.
      */
     func lowerCircle() {
+        for x in stride(from: 0, through: 500, by: 80) {
+            c.borderColor = Color(hue: 26, saturation: 69, brightness: 37, alpha: 100)
+            c.drawEllipse(centreX: x, centreY: 325, width: 21, height: 21)
+            c.borderColor = Color(hue: 22, saturation: 93, brightness: 90, alpha: 100)
+            c.drawEllipse(centreX: x, centreY: 325, width: 41, height: 41)
+            c.borderColor = Color(hue: 53, saturation: 93, brightness: 98, alpha: 100)
+            c.drawEllipse(centreX: x, centreY: 325, width: 60, height: 60)
+        }
         
     }
     
